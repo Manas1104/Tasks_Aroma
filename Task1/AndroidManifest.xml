@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- TextView to display the song title -->
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Song Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <!-- SeekBar for song progress -->
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_title"
+        android:layout_marginTop="16dp" />
+
+    <!-- Play button -->
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/seek_bar"
+        android:layout_marginTop="16dp"
+        android:text="Play" />
+
+    <!-- Previous button -->
+    <Button
+        android:id="@+id/btn_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/btn_play"
+        android:layout_below="@id/seek_bar"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Previous" />
+
+    <!-- Next button -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/btn_play"
+        android:layout_below="@id/seek_bar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Next" />
+
+    <!-- TextView to display elapsed time -->
+    <TextView
+        android:id="@+id/txt_elapsed_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/seek_bar"
+        android:layout_marginTop="8dp"
+        android:text="0:00" />
+
+    <!-- TextView to display total duration -->
+    <TextView
+        android:id="@+id/txt_total_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/seek_bar"
+        android:layout_marginTop="8dp"
+        android:text="4:00" />
+
+</RelativeLayout>
