@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Order Status -->
+    <TextView
+        android:id="@+id/order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Order Status: Out for Delivery"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <!-- Estimated Delivery Time -->
+    <TextView
+        android:id="@+id/estimated_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_status"
+        android:layout_centerHorizontal="true"
+        android:text="Estimated Delivery Time: 15 mins"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+   <fragment
+    android:id="@+id/map_fragment"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_below="@id/estimated_time" />
+
+    <FrameLayout
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/estimated_time"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Map View Placeholder"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <!-- Contact Delivery Button -->
+    <Button
+        android:id="@+id/contact_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Contact Delivery" />
+
+    <!-- Refresh Button -->
+    <Button
+        android:id="@+id/refresh_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_delivery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Refresh Status" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.INTERNET" />
+</RelativeLayout>
+
