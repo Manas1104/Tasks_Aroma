@@ -1,0 +1,46 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Story Image -->
+    <ImageView
+        android:id="@+id/story_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Story Text -->
+    <TextView
+        android:id="@+id/story_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/story_image"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:text="Story content goes here..."
+        android:layout_marginBottom="16dp" />
+
+    <!-- Previous Page Button -->
+    <Button
+        android:id="@+id/prev_page_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:text="Previous"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Next Page Button -->
+    <Button
+        android:id="@+id/next_page_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="Next" />
+</RelativeLayout>
